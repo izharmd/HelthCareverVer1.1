@@ -58,6 +58,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
     LinearLayout ll_tab_healthRecord;
     LinearLayout ll_header_healthMonitiring;
 
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
