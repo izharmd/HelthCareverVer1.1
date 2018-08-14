@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.numetriclabz.numandroidcharts.MultiLineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="gone" />
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/drawer_content_padding"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/custom_navigationtoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/ll_header"
+                layout="@layout/header_toolbar" />
+
+            <include
+                android:id="@+id/ll_tab"
+                layout="@layout/header_dashboard_tab"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/ll_tab_healthRecord"
+                layout="@layout/header_health_record_tab"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/ll_header_healthMonitiring"
+                layout="@layout/header_health_monetaring"
+                android:visibility="gone" />
+
+
+            <FrameLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_background"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_graph"
+                        android:orientation="vertical">
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_first_secound_third" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2.3"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Your Last Readings"
+                                android:textColor="@color/orange_lastReading"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/graydark"></View>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="SYSTOLIC/DIASTOLIC "
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text=" :  118/78mmHg"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/graydark"></View>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text="HEART RATE "
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:text=" :  78bpm"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/graydark"></View>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="WEIGHT "
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text=" :  52 Kg"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".7">
+
+
+                            <include
+                                layout="@layout/footer_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:layout_weight="1"
+                                android:visibility="visible"/>
+
+                            <android.support.design.widget.BottomNavigationView
+                                android:id="@+id/navigation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="0dp"
+                                android:layout_marginStart="0dp"
+                                android:background="#ffffff"
+                                app:itemIconTint="@drawable/bottom_tool_selector"
+                                app:menu="@menu/navigation"
+                                android:visibility="gone"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+====================================
+
+        <!-- The navigation drawer -->
+
+        <LinearLayout
+            android:id="@+id/DrawerLinear"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="240dp"
+                android:layout_height="100dp"
+                android:background="@color/orange_header"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:id="@+id/headerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="Hi Izhar "
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <ListView
+                android:id="@+id/left_drawer"
+                android:layout_width="@dimen/drawer_size"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_background"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:entries="@array/drawerOptions" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+
+    <!-- <com.numetriclabz.numandroidcharts.LineChart
+     android:id="@+id/linechart"
+     android:layout_height="400dp"
+     android:layout_width="wrap_content"/>-->
+
+</LinearLayout>
